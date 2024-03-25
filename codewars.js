@@ -397,3 +397,4 @@ function squareDigits(num){
      
      return Number(res);
    }
+   
