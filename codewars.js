@@ -411,3 +411,45 @@ function lovefunc(flower1, flower2){
   //if the remainder of the flowers when divided by two are the same then the conditions are false
   return flower1 % 2 === flower2 % 2 ? false : true
 }
+
+
+
+// Sum Arrays
+
+// Instructions
+
+// Write a function that takes an array of numbers and returns the sum of the numbers. The numbers can be negative or non-integer. If the array does not contain any numbers then you should return 0.
+
+// Examples
+// Input: [1, 5.2, 4, 0, -1]
+// Output: 9.2
+
+// Input: []
+// Output: 0
+
+// Input: [-2.398]
+// Output: -2.398
+
+// Assumptions
+// You can assume that you are only given numbers.
+// You cannot assume the size of the array.
+// You can assume that you do get an array and if the array is empty, return 0.
+
+
+function sum (numbers) {
+ 
+  //if the array is empty return 0
+  if(numbers.length === 0) return 0
+
+  //if the array has one element return the element
+  if(numbers.length === 1) return numbers[0]
+
+  //find the sum of the array using the reduce method
+ let sum = numbers.reduce((acc, curr) => {
+   acc += curr
+   return acc
+ }, 0)
+ 
+ //return the sum
+ return sum
+};
