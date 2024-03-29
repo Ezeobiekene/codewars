@@ -466,3 +466,29 @@ function sum (numbers) {
 let greeet = function(){
   return 'hello world!'
 }
+
+
+
+
+// DESCRIPTION:
+// Write function RemoveExclamationMarks which removes all exclamation marks from a given string.
+
+// FUNDAMENTALSSTRINGS
+
+function removeExclamationMarks(s) {
+  let result = ''
+  
+  for(let ele of s){
+    if(ele !== '!'){
+     result += ele
+    }
+  }
+  
+  return result;
+}
+
+//                  OR
+
+function removeExclamationMarks(s) {
+  return s.replace(/!/gi, '');
+}
