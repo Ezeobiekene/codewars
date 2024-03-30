@@ -492,3 +492,24 @@ function removeExclamationMarks(s) {
 function removeExclamationMarks(s) {
   return s.replace(/!/gi, '');
 }
+
+
+
+// Instructions
+
+// Write a function which calculates the average of the numbers in a given list.
+
+// Note: Empty arrays should return 0.
+
+function findAverage(array) {
+  // your code here
+  
+  if(array.length === 0) return 0
+  
+  sum = array.reduce((acc, curr) => {
+    acc += curr
+    return acc
+  }, 0);
+  let avg = sum / array.length
+  return avg
+}
