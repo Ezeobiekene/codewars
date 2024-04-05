@@ -738,3 +738,19 @@ function sumTwoSmallestNumbers(numbers) {
   numbers = numbers.sort((a, b) => a - b).filter(item => item > 0)
   return numbers[0] + numbers[1]
 }
+
+// DESCRIPTION
+// You get an array of numbers, return the sum of all of the positives ones.
+
+// Example [1,-4,7,12] => 1 + 7 + 12 = 20
+
+// Note: if there is nothing to sum, the sum is default to 0.
+
+
+
+function positiveSum(arr) {
+  return arr.reduce( (acc, curr) => {
+    if (curr > 0) acc += curr;
+    return acc;
+  }, 0)
+}
